@@ -15,30 +15,35 @@
     </head>
 
     <body>
+        <!--NOTES FOR IMPLEMENTATION
+        
+          Must add support for textboxes, make the buttons do something so users can interact and submit text
+          Make the input data go somewhere into SQL and be update-able with Flask + APIs
+
+        -->
+        
         <!--Make site outline with buttons for functions-->
-        <div class="container text-center border mt-4 title_bg">
+        <div class="container rounded text-center border mt-4 title_bg">
             <div class="row mt-4">
-                <h1>CURD Application Using Flask <mark>(interim title)</mark></h1>
+                <h1>User Management Corp.</h1>
             </div>
 
             <div class="row mt-4">
-                <p>CURD = Create, Update, Read, and Delete</p>
+                <p>CURD Application Using Flask <mark>(447 HW 2)</mark></p>
+                <p><u>CURD</u> = Create, Update, Read, and Delete</p>
             </div>
 
             <div class="row mt-4">
-              <div class="col border">
-                <h5>Create User (Create)</h5>
-              </div>
-              <div class="col border">
-                <h5>Search User (Read)</h5>
-              </div>
-              <div class="col border">
-                <h5>Delete User (Delete)</h5>
-              </div>
-              <div class="col border">
-                <h5>Update Function</h5>
+              <div class="col">
+                <div class="btn-group mt-4 btn-group-lg" role="group">
+                  <button type="button" class="btn btn-success">Create User (Create)</button>
+                  <button type="button" class="btn btn-primary">Search User (Read)</button>
+                  <button type="button" class="btn btn-danger">Delete User (Delete)</button>
+                  <button type="button" class="btn btn-warning">Update Function</button>
+                </div>
               </div>
             </div>
+            <div class="row mt-4"></div>
         </div>
 
         <script src=

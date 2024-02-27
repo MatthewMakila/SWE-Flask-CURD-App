@@ -6,12 +6,12 @@
         "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
               rel="stylesheet"
         />
-        <link href="style.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <style>
         </style>
-        <title>SWE CURD</title>
+        <title>SWE CRUD</title>
     </head>
 
     <body>
@@ -29,17 +29,22 @@
             </div>
 
             <div class="row mt-4">
-                <p>CURD Application Using Flask <mark>(447 HW 2)</mark></p>
-                <p><u>CURD</u> = Create, Update, Read, and Delete</p>
+                <p>CRUD Application Using Flask <mark>(447 HW 2)</mark></p>
+                <p><u>CRUD</u> = Create, Read, Update, and Delete</p>
             </div>
 
             <div class="row mt-4">
               <div class="col">
                 <div class="btn-group mt-4 btn-group-lg" role="group">
-                  <button type="button" class="btn btn-success">Create User (Create)</button>
+                  <a href="{{ url_for('create_user') }}"><button type="button" class="btn btn-success">Create User</button></a>
+                  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary">Search User</button></a>
+                  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-danger">Delete User</button></a>
+                  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-warning">Update</button></a>
+
+                  <!--button type="button" class="btn btn-success" onclick="window.location.href='create_user.html';">Create User (Create)</button>
                   <button type="button" class="btn btn-primary">Search User (Read)</button>
                   <button type="button" class="btn btn-danger">Delete User (Delete)</button>
-                  <button type="button" class="btn btn-warning">Update Function</button>
+                  <button type="button" class="btn btn-warning">Update Function</button-->
                 </div>
               </div>
             </div>

@@ -11,61 +11,35 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style> 
-            table, th, td { 
-              border:1px solid black; 
-            } 
-        </style> 
-
     </head> 
     <body> 
-        <!--Home button-->
         <div class="row mt-4">
-            <a href="{{ url_for('index') }}"><button type="button" class="btn btn-success">Finished?</button></a>
-            <!--button type="button" class="btn btn-success" onclick="window.location.href='templates/index.html';">Finished?</button-->
+            <h2>Create a New User</h2>
         </div>
-        <!--Form to get info to create new user-->
-        <div class="row mt-4">
-            <form method="POST"> 
-                <label>Your Name:</label> 
-                <input type="name" name="name" placeholder="Enter your name" required><br/> 
-                <label>Your Email:</label> 
-                <input type="email" name="email" placeholder="Enter your email" required><br/> 
-                <label>Your phone #:</label> 
-                <input type="name" name="phone" placeholder="Your Phone Number" required><br/> 
-                <input type = "submit" value = "submit"/><br/> 
-            </form> 
-        </div>
-        
         <div class="container mt-4">
+            <!--Form to get info to create new user-->
             <div class="row mt-4">
-                <table style="width:100%"> 
-                    <tr> 
-                      <th><h2>Name</h2></th> 
-                      <th><h2>ID #</h2></th> 
-                      <th><h2>Points</h2></th> 
-                    </tr> 
-                    {%for user in users%} 
-                       <tr> 
-                         <td>{{user['user_name']}}</td> 
-                         <td>{{user['id']}}</td>
-                         <td>{{user['points']}}</td>
-                        </tr> 
-                    {%endfor%} 
-                </table> 
+                <form method="POST"> 
+                    <label>Your Name:</label> 
+                    <input type="name" name="user_name" placeholder="Enter your name" 
+                    value="{{ request.form['user_name'] }}" required><br/> 
+                    
+                    <label>Your ID#:</label> 
+                    <input type="number" name="id" placeholder="Enter your ID" 
+                    value="{{ request.form['id'] }}" required><br/> 
+                    
+                    <label>Your Points:</label> 
+                    <input type="number" name="points" placeholder="Enter your points" 
+                    value="{{ request.form['points'] }}" required><br/> 
+                    
+                    <input type="submit" value = "Submit"/><br/> 
+                </form> 
             </div>
-        </div>  
-
-        <!--
-            <h1>{% block title %} Current Users: {% endblock %}</h1>
-              {% for user in users %}
-              <div class='user'>
-                  <p>Name: {{ user['user_name'] }}</p>
-                  <p>ID: {{ user['id'] }}</p>
-                  <p>Points: {{ user['points'] }}</p>
-              </div>
-              {% endfor %}
-        -->
-        
+            
+            <!--Return to home button-->
+            <div class="row mt-4">
+                <a href="{{ url_for('index') }}"><button type="button" class="btn btn-success">Go Back?</button></a>
+            </div>
+        </div>
     </body> 
 </html>

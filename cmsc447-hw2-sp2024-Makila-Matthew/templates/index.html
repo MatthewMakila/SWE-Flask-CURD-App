@@ -16,10 +16,9 @@
 
     <body>
         <!--NOTES FOR IMPLEMENTATION
-        
+          
           Must add support for textboxes, make the buttons do something so users can interact and submit text
           Make the input data go somewhere into SQL and be update-able with Flask + APIs
-
         -->
         
         <!--Make site outline with buttons for functions-->
@@ -33,18 +32,14 @@
                 <p><u>CRUD</u> = Create, Read, Update, and Delete</p>
             </div>
 
+            <!--User choice buttons-->
             <div class="row mt-4">
               <div class="col">
                 <div class="btn-group mt-4 btn-group-lg" role="group">
                   <a href="{{ url_for('create_user') }}"><button type="button" class="btn btn-success">Create User</button></a>
-                  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary">Search User</button></a>
+                  <a href="{{ url_for('search_user') }}"><button type="button" class="btn btn-primary">Search User</button></a>
                   <a href="{{ url_for('index') }}"><button type="button" class="btn btn-danger">Delete User</button></a>
                   <a href="{{ url_for('index') }}"><button type="button" class="btn btn-warning">Update</button></a>
-
-                  <!--button type="button" class="btn btn-success" onclick="window.location.href='create_user.html';">Create User (Create)</button>
-                  <button type="button" class="btn btn-primary">Search User (Read)</button>
-                  <button type="button" class="btn btn-danger">Delete User (Delete)</button>
-                  <button type="button" class="btn btn-warning">Update Function</button-->
                 </div>
               </div>
             </div>

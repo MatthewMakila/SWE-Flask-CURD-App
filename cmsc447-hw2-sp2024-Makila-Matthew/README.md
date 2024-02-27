@@ -4,10 +4,10 @@
 # Run Instructions
 * Initiate a venv
 
-* Setup the database:
-* Run the init_db.py file to create the initial database populated with sample data
+### Setup the database:
+* **Once only** Run `init_db.py` to initialize database with sample data
 
-* Running the flask application and accessing the web server: 
+### Running the flask application and accessing the web server: 
 * cd into the proper directory: `cd cmsc447-hw2-sp2024-Makila-Matthew`
 * Initiate the command: `set FLASK_APP=app` (windows) or `export FLASK_APP=app` (mac)
 * Initiate the command: `set FLASK_ENV=development` (windows) or `export FLASK_ENV=development` (mac)
@@ -16,4 +16,3 @@
 # Dependencies and Libraries
 * Must have installed virtual environment `venv`
 * Then install Flask (`flask`) & database packages (`databases`, `sqlite3`)
-

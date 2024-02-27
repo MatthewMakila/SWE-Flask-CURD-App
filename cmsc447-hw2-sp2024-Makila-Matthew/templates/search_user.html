@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Create User</title> 
+        <!--Scale and style webpage-->
+        <link href= 
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+        />
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style> 
+            table, th, td { 
+              border:1px solid black; 
+            } 
+        </style> 
+
+    </head> 
+    <body> 
+        <div class="row mt-4">
+            <h2>Current Users</h2>
+        </div>
+        <div class="container mt-4">
+            <!--Return to home button-->
+            <div class="row mt-4">
+                <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary">Go Back?</button></a>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row mt-4">
+                <table style="width:100%"> 
+                    <tr> 
+                      <th><h2>Name</h2></th> 
+                      <th><h2>ID #</h2></th> 
+                      <th><h2>Points</h2></th> 
+                    </tr> 
+                    {%for user in users%} 
+                       <tr> 
+                         <td>{{user['user_name']}}</td> 
+                         <td>{{user['id']}}</td>
+                         <td>{{user['points']}}</td>
+                        </tr> 
+                    {%endfor%} 
+                </table> 
+            </div>
+        </div>  
+    </body> 
+</html>

@@ -8,9 +8,6 @@
         />
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <style>
-        </style>
         <title>SWE CRUD</title>
     </head>
 
@@ -24,12 +21,13 @@
         <!--Make site outline with buttons for functions-->
         <div class="container rounded text-center border mt-4 title_bg">
             <div class="row mt-4">
-                <h1>User Management Corp.</h1>
+                <h1>User-topia Corp.</h1>
             </div>
 
             <div class="row mt-4">
                 <p>CRUD Application Using Flask <mark>(447 HW 2)</mark></p>
                 <p><u>CRUD</u> = Create, Read, Update, and Delete</p>
+                <p><mark>by Matthew Makila</mark></p>
             </div>
 
             <!--User choice buttons-->
@@ -38,8 +36,6 @@
                 <div class="btn-group mt-4 btn-group-lg" role="group">
                   <a href="{{ url_for('create_user') }}"><button type="button" class="btn btn-success">Create User</button></a>
                   <a href="{{ url_for('search_user') }}"><button type="button" class="btn btn-primary">Search User</button></a>
-                  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-danger">Delete User</button></a>
-                  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-warning">Update</button></a>
                 </div>
               </div>
             </div>

@@ -13,6 +13,11 @@
 * Initiate the command: `set FLASK_ENV=development` (windows) or `export FLASK_ENV=development` (mac)
 * In the command line, `flask run` and follow the provided URL
 
+### Using the webpage:
+* From the home screen, you can simply press **Create User** and fill in information to create a new user
+* You can also press **Search User** and then type in a partially-matching username or complete ID to search the database!
+* The **Edit** button on the search page allows you to adjust the name and points, or **Delete** a user
+
 # Dependencies and Libraries
 * Must have installed virtual environment `venv`
-* Then install Flask (`flask`) & database packages (`databases`, `sqlite3`)
+* Then install Flask (`flask`) & database packages (`databases`, `db-sqlite3`) with `pip install [the_package_names]`

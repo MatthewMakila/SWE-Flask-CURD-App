@@ -19,33 +19,48 @@
 
     </head> 
     <body> 
-        <div class="row mt-4">
-            <h2>Current Users</h2>
+        <!--Displaying current user table-->
+        <div class="container rounded border mt-4 bg-primary">
+            <h2 style="color:white;">Current Users</h2>
         </div>
+
+        <!--Search bar, takes queries connected to db and displays-->
+        <div class="container mt-4">
+            <form action="{{ url_for('search_user') }}" method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="query" placeholder="Enter username or ID number" value="{{ query }}">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        
+        <!--Back button-->
         <div class="container mt-4">
             <!--Return to home button-->
             <div class="row mt-4">
-                <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary">Go Back?</button></a>
+                <a href="{{ url_for('index') }}"><button type="button" class="btn btn-primary">Return Home?</button></a>
             </div>
         </div>
-
+  
+        <!--User Table-->
         <div class="container mt-4">
             <div class="row mt-4">
                 <table style="width:100%"> 
                     <tr> 
-                      <th><h2>Name</h2></th> 
-                      <th><h2>ID #</h2></th> 
-                      <th><h2>Points</h2></th> 
+                        <th><h2>Name</h2></th> 
+                        <th><h2>ID #</h2></th> 
+                        <th><h2>Points</h2></th>
                     </tr> 
                     {%for user in users%} 
-                       <tr> 
-                         <td>{{user['user_name']}}</td> 
-                         <td>{{user['id']}}</td>
-                         <td>{{user['points']}}</td>
+                        <tr> 
+                            <td>{{user['user_name']}}</td> 
+                            <td>{{user['id']}}</td>
+                            <td>{{user['points']}}</td>
+                            <td><a href="{{ url_for('edit_user', id=user['id']) }}"><button type="button" class="btn btn-warning">Edit</button></a></td>
                         </tr> 
                     {%endfor%} 
                 </table> 
             </div>
-        </div>  
+        </div>   
     </body> 
 </html>

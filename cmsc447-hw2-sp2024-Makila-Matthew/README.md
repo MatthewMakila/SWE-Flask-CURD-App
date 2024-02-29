@@ -21,3 +21,7 @@
 # Dependencies and Libraries
 * Must have installed virtual environment `venv`
 * Then install Flask (`flask`) & database packages (`databases`, `db-sqlite3`) with `pip install [the_package_names]`
+
+# Sources
+* With assistance for Flask from: 
+* > https://www.digitalocean.com/community/tutorials
